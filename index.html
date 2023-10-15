@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cajero Automático</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="./logo main.png" alt="">  
+        <nav>
+          <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Cuentas</a></li>
+            <li><a href="#">Transacciones</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
+        </nav>
+      </header>
+      
+      <main>
+        <section class="body-container">
+
+          
+          <section class="form-block">
+
+            <section class="body-container">
+                <section class="form-block">
+                  <div class="account-buttons" id="cuentas">
+                    <h2>Inicio de Sesión</h2>
+                    <input type="text" id="username" placeholder="Ingresa tu nombre de usuario">
+                    <input type="password" id="password" placeholder="Ingresa tu contraseña">
+                    <button onclick="verificarUsuario()">Iniciar Sesión</button>
+                  </div>
+                </section>
+            </section>
+            
+            <div id="opciones" style="display: none;" class="account-buttons" >
+                <h2>Selecciona una opción:</h2>
+                <button onclick="consultarSaldo()">Consultar Saldo</button>
+                <button onclick="ingresarMonto()">Ingresar Monto</button>
+                <button onclick="retirarMonto()">Retirar Monto</button>
+            </div>
+
+
+            
+            <div id="resultados" style="display: none;" class="account-buttons" >
+              <p id="mensaje"></p>
+              <p id="saldo"></p>
+              <button type="button" onclick="volverAOpciones()">Volver a opciones</button>
+            </div>
+          </section>
+        </section>
+      </main>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="app.js"></script>
+</body>
+</html>
